@@ -1,24 +1,54 @@
-/* Default style for desktop */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
-/* Mobile style */
-@media only screen and (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+.navbar .logo {
+  width: 50px;
+  height: auto;
+}
+.navbar{
+	background:black;
+}
+.navbar nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.search-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-login input[type="text"] {
+  padding: 5px;
+}
 .main{
 	height:70%;
 	width:100%;
@@ -26,162 +56,75 @@ body {
 	background-size:cover;
 	color:white;
 }
-h1{
-	padding-top:200px;
-	margin:4
-	color:white;
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 20px 0;
 }
-.navbar {
-	position:fixed;
-  top: 0;
-  width: 100%;
-  background-color: #333;
-  padding: 0px 0;
-  z-index: 1000;
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1em;
+  max-width: 600px;
+  margin: auto;
+}
+.foodies-guide h2{
+	margin-top:40px;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1 1 250px; /* flexible width */
   text-align: center;
 }
-.navbar a {
-	padding:14px 20px;
-  color: white;
-  text-decoration: none;
-  display:inline-block;
+
+.box img {
+  max-width: 100%;
+  height:auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
-a{
-	margin:45px;
-	margin-top:0;
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.5em;
+  }
+  .hero p {
+    font-size: 0.9em;
+  }
 }
-a:hover{
-	background-color:gray;
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.url{
-	background:#fafafa;
-	height:800px;
+.container1{
+background-color:black;
 }
-h2{
-	font-size:130px;
-	margin:5%;
-	color:lightgray;
-}
-h3{
-	color:red;
-margin-top:100px;
-}
-.url p{
-	padding-bottom:200px;
-}
-.cover{
-	display:flex;
-	margin-left:80px;
-margin-right:0;
-}
-.cover p{
-	width:400px;
-	margin-top:20px;
-	color:gray;
-}
-.cover1{
-	margin-left:200px;
-}
-.box4{
-	display:flex;
-}
-.box4 img{
-	border-radius:50px;
-}
-form{
-	padding:100px;
-	padding-left:400px;
-}
-.m{
-	padding-top:20px;
-	display:flex;
-	margin-left:200px;
-}
-h6{
-	margin:10px;
-	padding-left:60px;
-}
-input{
-	padding:2px;
-}
-.m img{
-border-radius:50px;	
-}
-.f{
-	display:flex;
-	padding-left:90px;
-}
-.f h6{
-	padding-left:160px;
-}
-.blog{
+.container1 h5{
 	color:white;
-	float:left;
-	font-size:35px;
-	font-family:arial;
-	padding-left:100px;
-	padding-top:20px;
 }
-.flip{
-		display: flex;
-  justify-content: center; 
-  align-items: center;      
-  gap: 40px;              
-  height: 80vh; 
-  background:#fafafa;
-	}
-	.flip-card{
-      background-color: transparent;
-      width: 250px;
-      height: 400px;
-      perspective: 1000px; /* Adds 3D perspective */
-    }
-	.card-image {
-		 width:250.5px;
-      height: 200px;
-  object-fit: cover;
-  border-radius:10px;
-}
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front,
-    .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-
-    .flip-card-front {
-      background-color: #fff;
-      color: black;
-    }
-
-    .flip-card-back {
-      background-color: #2980b9;
-      color: white;
-      transform: rotateY(180deg);
-    }
-	.card-content{
-		padding:20px;
-	}
-}
-.con h2{
-	display:flex;
-	color:white;
-	font-size:30px;
+.con{
+	background-image:url("images/mlk.png");
+	background-size:cover;
 }
 table{
 	padding-top:80px;
@@ -194,17 +137,3 @@ td{
 	color:white;
 gap: 40px;  
 }
-.con{
-height:40%;
-	width:100%;
-	background-image:url("images/mlk.png");
-	background-size:cover;
-}
-.container1{
-	background:black;
-}
-h5{
-	color:white;
-
-}
-
